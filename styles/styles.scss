@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+$dark: #19191e;
+$white: #fff2e9;
+$brown: #7d5647;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Playfair Display", serif;
+  color: $dark;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+}
+
+html {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+  body,
+  .body {
+    width: 100%;
+    height: 100%;
+
+    justify-content: center;
+    gap: 24px;
+    position: relative;
+
+    img {
+      height: 25vh;
+      position: absolute;
+      //   border: 1px solid $dark;
+      top: 50%;
+      left: 50%;
+      transform: translateY(-50%) translateX(-50%);
+      transition: all 0.5s ease;
+    }
+    .smallLogo {
+      top: 24px;
+      left: 24px;
+      transform: translateY(0%) translateX(0%);
+      height: 10vh;
+    }
+
+    .loader {
+      position: absolute;
+      top: 75%;
+      height: 8px;
+      width: 200px;
+      border: 1px solid $dark;
+      border-radius: 8px;
+      overflow: hidden;
+
+      .bar {
+        height: 100%;
+        width: 100%;
+        border-radius: inherit;
+        background-color: $dark;
+      }
+      @keyframes load {
+        0% {
+          width: 0%;
+        }
+        100% {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,1 @@
+How do I write a JS function that dictates that something happens 5 s after the page loads

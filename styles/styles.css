@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Playfair Display", serif;
+  color: #19191e;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+}
+
+html {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+html body,
+html .body {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  gap: 24px;
+  position: relative;
+}
+html body img,
+html .body img {
+  height: 25vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  transition: all 0.5s ease;
+}
+html body .smallLogo,
+html .body .smallLogo {
+  top: 24px;
+  left: 24px;
+  transform: translateY(0%) translateX(0%);
+  height: 10vh;
+}
+html body .loader,
+html .body .loader {
+  position: absolute;
+  top: 75%;
+  height: 8px;
+  width: 200px;
+  border: 1px solid #19191e;
+  border-radius: 8px;
+  overflow: hidden;
+}
+html body .loader .bar,
+html .body .loader .bar {
+  height: 100%;
+  width: 100%;
+  border-radius: inherit;
+  background-color: #19191e;
+}
+@keyframes load {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}/*# sourceMappingURL=styles.css.map */

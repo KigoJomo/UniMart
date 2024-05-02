@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="{% static 'styles/styles.css' %}">
+    <title>Unimart</title>
+</head>
+
+<body class="column body">
+    <header class="row">
+        <a href="{% url 'shop' %}">
+            <h3>Unimart</h3>
+        </a>
+        <form action="" method="post" class="row" id="searchBar">
+            <div class="fieldWrapper row">
+                <label for="search" class="material-symbols-outlined">search</label>
+                <input id="search" type="text" placeholder="Search products">
+            </div>
+            <button type="submit" name="search">go</button>
+        </form>
+    </header>
+    <main class="column">
+        <!-- <section id="featured" class="row">
+            <div class="left column">
+                <div class="featuredProduct column">
+                    <img src="{% static 'images/placeholder.jpg' %}" alt="">
+                    <h4>Product Name</h4>
+                    <p class="price">kes 1399</p>
+                </div>
+                <div class="featuredProduct column">
+                    <img src="{% static 'images/placeholder.jpg' %}" alt="">
+                    <h4>Product Name</h4>
+                    <p class="price">kes 1399</p>
+                </div>
+            </div>
+            <div class="right"></div>
+        </section> -->
+
+        <section id="productsSection" class="column">
+            <div class="top row">
+                <h3 id="categoryIndicator">featured</h3>
+                <div id="categories" class="column categories">
+                    <button id="All">All Categories</button>
+                    <button id="Electronics">Electronics</button>
+                    <button id="Clothing">Clothing</button>
+                    <button id="Home_and_Kitchen">Home and Kitchen</button>
+                    <button id="Books">Books</button>
+                    <button id="Health_and_Beauty">Health and Beauty</button>
+                    <button id="Toys_and_Games">Toys and Games</button>
+                    <button id="Sports_and_Outdoors">Sports and Outdoors</button>
+                    <button id="Automotive">Automotive</button>
+                    <button id="Grocery">Grocery</button>
+                    <button id="Office_Supplies">Office Supplies</button>
+                </div>
+                <div class="row" id="filter">
+                    <span class="material-symbols-outlined">filter_list</span>
+                    <h4>filter</h4>
+                </div>
+            </div>
+
+            <div class="products" id="products">
+
+            </div>
+
+        </section>
+    </main>
+    <footer class="row">
+        <p>Copyright Unimart 2024.</p>
+    </footer>
+
+    <script src="{% static 'scripts/script.js'%}"></script>
+</body>
+
+</html>

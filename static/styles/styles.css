@@ -1,0 +1,300 @@
+@font-face {
+  font-family: "Michroma";
+  src: url("../fonts/Michroma/Michroma-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins/Poppins-Thin.ttf") format("truetype");
+  font-weight: 100;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins/Poppins-Light.ttf") format("truetype");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins/Poppins-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins/Poppins-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins/Poppins-Bold.ttf") format("truetype");
+  font-weight: 800;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins/Poppins-ExtraBold.ttf") format("truetype");
+  font-weight: 900;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: #141414;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+a,
+button {
+  text-transform: capitalize;
+}
+
+p {
+  color: #353535;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+button {
+  padding: 8px 24px;
+  border: none;
+  color: #f3f3f3;
+  background-color: #141414;
+  cursor: pointer;
+}
+button:hover {
+  background-color: transparent;
+  color: #141414;
+  border: 1px solid #141414;
+}
+
+.column, .row {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 24px;
+}
+
+.row {
+  flex-direction: row;
+  align-items: center;
+}
+
+.price {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+html .body {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background-color: #f3f3f3;
+  padding: 10vh 32px;
+  padding-bottom: 0;
+  overflow-y: scroll;
+}
+html .body::-webkit-scrollbar {
+  display: none;
+}
+html .body header {
+  width: 100%;
+  height: 7vh;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  justify-content: space-between;
+  padding: 0 32px;
+  box-shadow: 0px 1px 10px 0px rgba(20, 20, 20, 0.3294117647);
+  -webkit-backdrop-filter: blur(30px);
+          backdrop-filter: blur(30px);
+}
+html .body header form {
+  height: 100%;
+}
+html .body header form .fieldWrapper {
+  gap: 8px;
+  border-bottom: 1px solid #141414;
+}
+html .body header form .fieldWrapper label {
+  font-size: 1.25rem;
+}
+html .body header form .fieldWrapper input {
+  border: none;
+  padding: 4px 8px;
+  background: transparent;
+}
+html .body header form .fieldWrapper input:focus {
+  outline: none;
+}
+html .body main {
+  width: 100%;
+}
+html .body main section {
+  width: 100%;
+}
+html .body main #featured {
+  height: 300px;
+  overflow: hidden;
+}
+html .body main #featured * {
+  border-radius: 4px;
+}
+html .body main #featured .left {
+  width: 15%;
+  height: 100%;
+  gap: 8px;
+}
+html .body main #featured .left .featuredProduct {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  justify-content: flex-end;
+  padding: 8px;
+  gap: 4px;
+}
+html .body main #featured .left .featuredProduct img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  z-index: -2;
+}
+html .body main #featured .left .featuredProduct::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: linear-gradient(0deg, rgba(20, 20, 20, 0.4745098039), rgba(20, 20, 20, 0.4196078431), rgba(20, 20, 20, 0.2549019608), rgba(20, 20, 20, 0));
+}
+html .body main #featured .right {
+  height: 100%;
+  width: 85%;
+  background: url("../images/placeholder.jpg") center/cover no-repeat;
+}
+html .body main #productsSection {
+  padding-top: 24px;
+}
+html .body main #productsSection .response {
+  position: absolute;
+  top: 20px;
+}
+html .body main #productsSection .top {
+  width: 100%;
+  justify-content: space-between;
+  position: relative;
+}
+html .body main #productsSection .top .categories {
+  position: absolute;
+  top: 120%;
+  right: 0;
+  width: 250px;
+  height: 0px;
+  overflow: hidden;
+  overflow-y: scroll;
+  box-sizing: border-box;
+  box-shadow: 0px 1px 10px 0px rgba(20, 20, 20, 0.3294117647);
+  background: #f3f3f3;
+  border-radius: 4px;
+  transition: all 0.5s ease;
+}
+html .body main #productsSection .top .categories::-webkit-scrollbar {
+  width: 3px;
+}
+html .body main #productsSection .top .categories::-webkit-scrollbar-thumb {
+  background-color: #141414;
+  border-radius: 16px;
+}
+html .body main #productsSection .top .categories::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+html .body main #productsSection .top .categories button {
+  flex-shrink: 0;
+  width: 100%;
+}
+html .body main #productsSection .top .categoriesVisible {
+  height: 200px;
+  gap: 8px;
+  padding: 16px 24px;
+}
+html .body main #productsSection .top #filter {
+  cursor: pointer;
+  gap: 8px;
+  position: relative;
+}
+html .body main #productsSection .top #filter::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 50%;
+  height: 1px;
+  width: 0;
+  background-color: #141414;
+  transition: all 0.3s ease;
+}
+html .body main #productsSection .top #filter:hover::after {
+  width: 100%;
+  left: 0;
+}
+html .body main #productsSection #products {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 32px;
+}
+html .body main #productsSection #products .product {
+  height: 350px;
+  max-width: 350px;
+  overflow: hidden;
+  justify-content: space-between;
+  gap: 8px;
+  cursor: pointer;
+  border-radius: 4px;
+  padding-bottom: 8px;
+}
+html .body main #productsSection #products .product img {
+  height: 80%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+html .body main #productsSection #products .product .desc {
+  width: 100%;
+  height: 20%;
+  gap: 8px;
+  padding: 0 8px;
+}
+html .body main #productsSection #products .product .desc .row {
+  width: 100%;
+  justify-content: space-between;
+}
+html .body main #productsSection #products .product:hover {
+  box-shadow: 0px 1px 10px 0px rgba(20, 20, 20, 0.3294117647);
+}
+html .body footer {
+  width: 100%;
+  padding: 16px 0;
+  border-top: 1px solid #141414;
+  justify-content: center;
+}

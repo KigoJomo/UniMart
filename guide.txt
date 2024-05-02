@@ -1,0 +1,9 @@
+<form action="" method="post" class="row" id="searchBar">
+    <div class="fieldWrapper row">
+        <label for="search" class="material-symbols-outlined">search</label>
+        <input id="search" type="text" placeholder="Search products">
+    </div>
+    <button type="submit" name="search">go</button>
+</form>
+
+How do I implement this now in a similar manner as we have done categorizing?

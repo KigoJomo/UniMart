@@ -1,0 +1,14 @@
+{
+    "builds": [
+      {
+        "src": "UniMart/wsgi.py",
+        "use": "@vercel/python"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "UniMart/wsgi.py"
+      }
+    ]
+}

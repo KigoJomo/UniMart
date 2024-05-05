@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-hvxm^1vv1(w(*0io1ow=kyb&rt&@q^38-r$$%nx#(cg@pn!lmp
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -75,10 +75,23 @@ WSGI_APPLICATION = 'Unimart.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'URL': 'postgresql://postgres:EJBcYQNGATWGxjLupNZbZbYUrAgMoKrR@monorail.proxy.rlwy.net:48989/railway',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': 'EJBcYQNGATWGxjLupNZbZbYUrAgMoKrR',
+        'HOST': 'monorail.proxy.rlwy.net',
+        'PORT': 48989,
     }
 }
 
@@ -118,8 +131,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
-STATICFILES_DIRS = [BASE_DIR / "static"]
-# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# STATICFILES_DIRS = [BASE_DIR / "static"]
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
